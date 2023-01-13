@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header{
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+nav {
+  display: flex;
+  overflow: hidden;
+  height: 3rem;
+}
+nav li {
+  list-style: none;
+  margin: auto;
+  font-size: 1.1rem;
+  font-family: 'Ubuntu';
+}
+nav li a:hover{
+  color: white;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+h1 {
+  margin: auto;
+}
+header {
+  background-color: #DCFAF5;
+  font-family: 'Ubuntu';
+}
+.about-info{
+    display: flex;
+    justify-content: center;
+}
+.about-info p{
+    text-align: center;
+}
+.a1{
+    margin: auto;
+}
+.a2{
+    margin: auto;
+}
+img{
+    height: 300px;
+}
+main{
+  background-color: #D2FBF4;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.line1{
+  display: flex;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+.line2{
+  display: flex;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.line3{
+  display: flex;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.imggg{
+  margin-top: 50px;
+  height: 100px;
+}
+.first{
+  margin: auto;
+  height: 200px;
+  width: 400px;
+  background-color: hwb(169 78% 5%);
+  overflow: hidden;
+}
+.first:hover{
+  box-shadow: 10px 4px 18px hwb(169 64% 12%), 5px 5px 18px #4a4a4a;
+
+}
+.second{
+  margin: auto;
+  background-color: hwb(169 78% 5%);
+  height: 200px;
+  width: 400px;
+  overflow: hidden;
+}
+.second:hover{
+  box-shadow: 10px 4px 18px hwb(169 64% 12%), 5px 5px 18px #4a4a4a;
+
+}
+.first_{
+  margin: auto;
+  background-color: hwb(169 78% 5%);
+  height: 200px;
+  width: 400px;
+  overflow: hidden;
+}
+.first_:hover{
+  box-shadow: 10px 4px 18px hwb(169 64% 12%), 5px 5px 18px #4a4a4a;
+
+}
+.second_{
+  margin: auto;
+  background-color: hwb(169 78% 5%);
+  height: 200px;
+  width: 400px;
+}
+.second_:hover{
+  box-shadow: 10px 4px 18px hwb(169 64% 12%), 5px 5px 18px #4a4a4a;
+
+}
+.first__{
+  margin: auto;
+  background-color: hwb(169 78% 5%);
+  height: 200px;
+  width: 400px;
+}
+.first__:hover{
+  box-shadow: 10px 4px 18px hwb(169 64% 12%), 5px 5px 18px #4a4a4a;
+
+}
+.second__{
+  margin: auto;
+  background-color: hwb(169 78% 5%);
+  height: 200px;
+  width: 400px;
+}
+.second__:hover{
+  box-shadow: 10px 4px 18px hwb(169 64% 12%), 5px 5px 18px #4a4a4a;
+
+}
+footer{
+  background-color: #D2EFFB;
+}
+a{
+  text-decoration: none;
+}

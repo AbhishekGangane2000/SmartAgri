@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Monitoring</title>
+    <!-- web cam link -->
+    <script src="https://unpkg.com/webcam-easy@1.0.5/dist/webcam-easy.min.js"></script>
+    <link rel="stylesheet" href="/css/crop_mon.css">
+</head>
+<body>
+    <div class="block_">
+        <div class="el">
+            <video src="" autoplay playsinlne width="500rem" height="500rem" id="webCam"></video>
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="btn">
+            <a download onclick="takePicture()" href="">Click Snap</a>
+        </div>
+    </div>
+    <script>
+        
+        const webCamElement = document.getElementById("webCam");
+        const canvasElement = document.getElementById("canvas");
+        const webcam = new Webcam(webCamElement,"user",canvasElement);
+        webcam.start();
+        function takePicture(){
+            let picture = webcam.snap();
+            document.querySelector("a").href=picture;
+        }
+    </script>
+</body>
+</html>

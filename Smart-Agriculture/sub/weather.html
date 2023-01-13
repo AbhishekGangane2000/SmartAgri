@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Weather App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/css/weather.css">
+</head>
+
+<body>
+    <div class="center_">
+        <div class="one">
+            <h1>Weather Report For Your City</h1>
+            <label for="tbuser">Enter Your City : </label>
+            <input type="text" name="" id="tbuser" placeholder="Enter City" maxlength="15">
+        </div>
+        <div class="two">
+
+            <input  class="btn" style="align-items: center;
+                        width: 110px; margin-top: 15px ;
+                        margin-bottom: 100px
+                        ;" type="button" value="Submit" id="btn1">
+        </div>
+    </div>
+  <div class="container">
+    <div class="card">
+      <h2><i class="fa fa-map-marker"></i> <span id="location"></span></h2>
+      <h6 id="weather"></h6>
+      <h4><span id="temp"></span><sup>o</sup>C</h4>
+      <img id="icon" src="">
+      <!-- <button class="refresh"><i class="fa fa-refresh"></i></button> -->
+    </div>
+  </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script type="text/javascript">
+    const txt1 = document.getElementById('tbuser');
+    const btn1 = document.getElementById('btn1');
+    var out1 ;
+    function fun(){
+        out1 = txt1.value;
+        console.log(out1);
+        out1 = "https://api.openweathermap.org/data/2.5/weather?q="+out1+"&appid=36b1fea70d5d8a0d5b124c6dda485e82";
+        console.log(out1);
+        link = out1;
+  var request = new XMLHttpRequest();
+  request.open('GET', link, true);
+  request.onload = function () {
+    var obj = JSON.parse(this.response);
+    console.log(obj);
+
+    document.getElementById('weather').innerHTML = obj.weather[0].description;
+    document.getElementById('location').innerHTML = obj.name;
+    document.getElementById('temp').innerHTML = parseFloat(obj.main.temp- 273.15).toFixed(2);
+    document.getElementById('icon').src = "http://openweathermap.org/img/w/" + obj.weather[0].icon + ".png";
+
+    if (request.status >= 200 && request.status < 400) {
+      var temp = obj.main.temp;
+    }
+    else {
+      console.log("The city doesn't exist! Kindly check");
+    }
+  }
+  request.send();
+    }
+    btn1.addEventListener('click',fun);
+  
+</script>
+
+</html>
